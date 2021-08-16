@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Testing</title>
+
+    <script>
+        //synchronous 
+        //     function answer() {
+        //   console.log("hello world (executes 2nd)");
+        //   function response() {
+        //     console.log("are you listening? (executes 4th)");
+        //     console.trace();
+        //     return;
+        //   }
+
+        //   console.log("i like bananas (executes 3rd)");
+        //   response();
+        // }
+
+        // console.log("good morning (executes 1st)");
+        // answer();
+
+        //async
+        // function sayHello() {
+        //   setTimeout( () => console.log("Hello world (runs 3rd)"), 1000);
+        //   function sayGoodbye() {
+        //     console.log("See ya (runs 2nd)");
+        //     console.trace();
+        //   }
+
+        //   console.log("Good Morning (runs 1st)");
+        //   sayGoodbye();
+        // }
+
+        // sayHello();
+
+        // function foo() {
+        //   setTimeout( () => {
+        //     console.log("bar");
+        //   }, 0);
+
+        //   console.log("foo");
+        //   console.log("baz");
+        // }
+
+        // foo();
+
+        //closure using return funciton
+        // function counter() {
+        //   let count = 0;
+        //   return function() {
+        //     return count++;
+        //   }
+        // }
+
+        // const increment = counter();
+        // increment(); //=> 0
+
+        //create objects with factory functions
+        // class Tiger {
+        //   constructor() {
+        //     this.noise = 'roar';
+        //   }
+        //   sound() {
+        //     console.log(this.noise)
+        //   }
+        // }
+
+        // const simba = new Tiger();
+        // simba.sound(); //=> "roar"
+
+        //factory function produces objects with a function, but doesnt return a function, rather returns an object literal
+        // const tiger = function() {
+        //   const noise = 'roar';
+        //   return {
+        //     sound: function() {
+        //       console.log(noise);
+        //     },
+        //   }
+        // }
+
+        // const tigger = tiger();
+        // tigger.sound(); //=> "roar"
+
+        //examining inheritence vs composition (factory funcitons)
+        // const chiller = (state) => ({
+        //     chill: () => console.log(`Ooh, I'm at ${state.temp} degrees`)
+        // })
+
+        // const caller = (state) => ({
+        //     call: () => console.log(`I am calling ${state.number}`)
+        // })
+
+        // const browserInternet = (state) => ({
+        //     browse: () => state.url
+        // })
+
+        // caller({ number: '411' }).call() //=> I am calling 411
+
+        // //creates factory function that creates object that contains desired behavior w/o excess baggage
+        // const chillinator = (temp) => {
+        //     let state = {
+        //         temp,
+        //         number: 311,
+        //         url: 'google.com'
+        //     }
+        //     return {
+        //         ...chiller(state), ...caller(state), ...browserInternet(state)
+        //     }
+
+    </script>
+</head>
+
+<body>
+    <!-- <button id="my-button" data-count="0">Clicks: 0</button> -->
+
+    <!-- <div id="container">
+        <button>Button #1</button>
+        <button>Button #2</button>
+        <button>Button #3</button>
+        <button>Button #4</button>
+        <button>Button #5</button>
+      </div> -->
+</body>
+<script src="cs.js"></script>
+
+</html>
